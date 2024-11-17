@@ -372,6 +372,32 @@ main aside.social-media li a:hover{
     color: #9AD0C2;
 }
 
+@media (max-width: 767px){
+    main aside{
+        inset-inline-start: auto;
+        inset-inline-end: 0;
+    }
+
+    main aside .social-media{
+        height: auto;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    main aside .social-media ul {
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        border-radius: 0;
+    }
+    main aside .social-media li a{
+        font-size: 1.2 rem;
+    }
+}
+
 footer {
     background-color: #265073;
     height: 50px;
