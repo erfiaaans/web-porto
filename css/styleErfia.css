@@ -3,6 +3,9 @@
 *::after{
     box-sizing: border-box;
 }
+html{
+    scroll-padding-top: 100px;
+}
 p{
     color: #555;
 }
@@ -18,17 +21,23 @@ body{
 /*header*/
 header.navbar-container{
     width: 100%;
-    max-width: 1200px;
-    padding-block: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba (0, 0, 0, 0.1);
+
+    max-width: 1250px;
+    padding-block: 0rem 1rem;
     margin-inline: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    z-index: 9999;
+    z-index: 999;
 }
 
 header.navbar-container .nama-header{
-    width: 500px;
+    width: 400px;
 }
 
 header.navbar-container .nama-header p{
@@ -62,7 +71,7 @@ header.navbar-container .nav-list li a{
     border-radius: 999px;
     text-decoration: none;
     font-size: 1.05rem;
-    font-weight: 500;
+    font-weight: 700;
     color: black;
     transition: all 0.2s ease-in-out;
 
@@ -82,6 +91,8 @@ main{
     max-width: 1200px;
     margin-inline: auto;
     padding: 2rem 4rem;
+
+    margin-top: 80px;
 }
 
 /*Home*/
@@ -150,6 +161,14 @@ main .content-home .content-image img{
 
 main .content{
     margin-top: 80px;
+    
+    align-items: center;
+    gap: 10px;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba (0, 0, 0, 0.1);
 }
 main .content .center{
     text-align: center;
@@ -158,6 +177,8 @@ main .content .center{
 main .content .content-title {
     /*width: 600px;*/
     text-align: center;
+    margin: 0 auto;
+    padding: 20px;
 }
 main .content .content-title .title{
     margin-block: 1rem;
@@ -176,18 +197,15 @@ main .content .content-title .desc{
 /*About Me*/
 main .content .about-container {
     display: flex;
-    /*flex-wrap: wrap;*/
-    /*justify-content: space-between;*/
     justify-content: center;
 }
 
 main .content .about-item {
     display: flex;
-    flex: wrap; /*membungkus gambar banyak*/
-    /*justify-content: space-between;*/
+    flex: wrap; 
     justify-content: center;
     gap: 10px;
-    width: 50%; /*ukuran gambar*/
+    width: 50%; 
     margin-bottom: 20px;
     padding: 10px;
 }
@@ -294,23 +312,24 @@ main .content .certif-pict p {
 /* end certif */
 
 /* Start contact */
+
 main aside .contacts-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     max-width: 1000px;
-    margin: 50px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba (0, 0, 0, 0.1);
 }
+
 main aside .content-title {
-    margin-top: 80px;
+    /* margin-top: 50px; */
     text-align: center;
     margin: 0 auto;
-    padding: 100px 5px 5px 5px;
+    padding: 20px;
 }
 
 main aside .content-title .title{
@@ -339,8 +358,6 @@ main aside .contact-image img{
     max-width: 250px;
     height: auto;
     border-radius: 10px;
-
-    /* margin: auto; */
 }
 
 main aside .contacts-box {
@@ -406,19 +423,17 @@ main aside .contacts-box  textarea {
 }
 /* End Contact */
 
-/* start aside */
-/* main aside{
+/* start social-media */
+
+aside .social-media{
+    height: 100%;
+    display: flex;
     position: fixed;
     inset-block: 0;
     inset-inline-start: 0;
 }
 
-main aside .social-media{
-    height: 100%;
-    display: flex;
-}
-
-main aside .social-media ul{
+aside .social-media ul{
     padding: 1.5rem 1rem;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -432,28 +447,28 @@ main aside .social-media ul{
     transition: all 0.3s ease;
 }
 
-main aside .social-media li{
+aside .social-media li{
     list-style-type: none;
 }
 
-main aside .social-media li a{
+aside .social-media li a{
     text-decoration: none;
     font-size: 1.5rem;
     color: white;
     transition: all 0.1s ease-in-out;
 }
 
-main aside.social-media li a:hover{
+aside.social-media li a:hover{
     color: #9AD0C2;
 }
 
 @media (max-width: 767px){
-    main aside{
+    aside{
         inset-inline-start: auto;
         inset-inline-end: 0;
     }
 
-    main aside .social-media{
+    aside .social-media{
         height: auto;
         width: 100%;
         position: fixed;
@@ -461,17 +476,17 @@ main aside.social-media li a:hover{
         left: 0;
     }
 
-    main aside .social-media ul {
+    aside .social-media ul {
         flex-flow: row nowrap;
         justify-content: center;
         gap: 1rem;
         padding: 0.5rem;
         border-radius: 0;
     }
-    main aside .social-media li a{
+    aside .social-media li a{
         font-size: 1.2 rem;
     }
-} */
+}
 
 /* end aside */
 
@@ -487,4 +502,10 @@ footer p{
 footer span{
     color: #9AD0C2;
 
+}
+[id]::before{
+    content: "";
+    display: block;
+    height: 15px;
+    visibility: hidden;
 }
