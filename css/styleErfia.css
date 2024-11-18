@@ -294,22 +294,73 @@ main .content .certif-pict p {
 /* end certif */
 
 /* Start contact */
-main .contacts-box {
+main aside .contacts-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba (0, 0, 0, 0.1);
+}
+main aside .content-title {
+    margin-top: 80px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 100px 5px 5px 5px;
+}
+
+main aside .content-title .title{
+    margin-block: 1rem;
+    color: #2D9596;
+}
+
+main aside .content-title .tagline{
+    margin-block: 1rem;
+    color: #265073;
+}
+main aside .content-title .desc{
+    font-size: 16px;
+    line-height: 1.7rem;
+}
+
+main aside .contact-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main aside .contact-image img{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+
+    /* margin: auto; */
+}
+
+main aside .contacts-box {
+    flex: 2;
+    padding: 20px;
     max-width: 800px;
     margin: 50px auto;
     border-radius: 10px;
 }
-main .contacts-box button{
+main aside .contacts-box button{
     padding: 0.5rem 2.5rem;
     width: 100%;
     font-weight: 600;
 }
 
-main .contacts-box  .form-group {
+main aside .contacts-box main aside .form-group {
     margin-bottom: 20px;
 }
 
-main .contacts-box label {
+main aside .contacts-box label {
     display: block;
     margin-bottom: 5px;
     color: #2D9596;
@@ -317,9 +368,9 @@ main .contacts-box label {
     font-size: 16px;
 }
 
-main .contacts-box input[type="text"],
-main .contacts-box input[type="email"],
-main .contacts-box textarea {
+main aside .contacts-box input[type="text"],
+main aside .contacts-box input[type="email"],
+main aside .contacts-box textarea {
     width: 100%;
     padding: 10px;
     border: none;
@@ -327,12 +378,36 @@ main .contacts-box textarea {
     border-radius: 5px;
 }
 
-main .contacts-box  textarea {
+main aside .contacts-box  textarea {
     resize: vertical;
+}
+
+@media (max-width: 767px){
+    main aside{
+        inset-inline-start: auto;
+        inset-inline-end: 0;
+    }
+
+    main aside .contacts{
+        height: auto;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    main aside .contacts .contacts-container {
+        flex-flow: row nowrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        border-radius: 0;
+    }
 }
 /* End Contact */
 
-main aside{
+/* start aside */
+/* main aside{
     position: fixed;
     inset-block: 0;
     inset-inline-start: 0;
@@ -396,7 +471,9 @@ main aside.social-media li a:hover{
     main aside .social-media li a{
         font-size: 1.2 rem;
     }
-}
+} */
+
+/* end aside */
 
 footer {
     background-color: #265073;
